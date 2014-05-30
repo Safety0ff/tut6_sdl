@@ -1,0 +1,17 @@
+{
+    "name": "tut_6",
+    "description": "tut 6",
+    "authors": ["Sam Hocevar",
+        "Andrej Mitrovic",
+        "Safety0ff"],
+
+	"targetType": "none",
+	"dependencies": {
+		"tut_6:tut_6_sdl": "~master",
+		"tut_6:tut_6_sdl_ts": "~master"
+	},
+	"subPackages": [
+		"./sdl/",
+		"./sdl_ts/"
+	]
+}

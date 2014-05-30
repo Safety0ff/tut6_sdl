@@ -1,0 +1,33 @@
+{
+    "name": "tut_6_sdl_ts",
+    "description": "tut 6 SDL port with improved event timestamps",
+    "authors": ["Safety0ff"],
+
+    "dependencies": {
+        "derelict-util": ">=1.0.1",
+        "derelict-sdl2":"~>1.2.0",
+        "derelict-gl3": ">=1.0.0",
+        "dgl": ">=0.0.5",
+        "gl3n": "~master",
+        "glamour-drey": ">=0.0.3-alpha",
+        "x11": { "version": ">=1.0.0", "optional": true },
+    },
+
+    "libs-posix": [
+        "SDL2",
+        "SDL2_image",
+    ],
+
+    "versions": [
+        "gl3n",
+        "glad",
+        "SDLImage2",
+    ],
+
+
+    "targetPath" : "../bin",
+    "targetType": "executable",
+    "targetName" : "tut6_ts",
+    "sourceFiles": ["main.d","../tut6.d","derelictsdl2_ext.d","sdl_ext.d"],
+    "mainSourceFile": "main.d",
+}
