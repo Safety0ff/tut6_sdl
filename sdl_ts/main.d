@@ -83,6 +83,7 @@ eventLoop:
             job();
         eventThreadJobs.clear();
         jobmutex.unlock();
+        receiveTimeout(dur!"nsecs"(0), (ThreadState newState) { state=newState; });
     }
 
     while (state == ThreadState.Cleanup)
@@ -141,6 +142,7 @@ void realmain(Tid tid)
     if (glContext is null)
     {
         stderr.writeln("There was an error creating an OpenGL 3.3 context!");
+        send(tid, ThreadState.Cleanup);
         return;
     }
 
